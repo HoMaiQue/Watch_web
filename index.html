@@ -26,7 +26,7 @@
 <body>
     <div class="app">
         <header class="header">
-            <div class="bar">
+            <div class="bar hide-on-tablet-mobile">
                 <div class="container wide">
                     <div class="bar__wrapper">
                         <div class="contact">
@@ -62,17 +62,19 @@
             <div class="search">
                 <div class="container wide">
                     <div class="search__wrapper">
+                        <span class="search__menu hide-on-pc"><i class="search__menu-icon fas fa-bars"></i></span>
+
                         <a href="" class="search__logo">
                             <img src="./assets/img/logo.png" alt="" class="search__logo-img">
                         </a>
 
-                        <div class="search__wrap">
+                        <div class="search__wrap hide-on-tablet-mobile">
                             <input type="text" class="search__input" placeholder="Tìm kiếm">
                             <button class="search__button"><i class="search__icon fas fa-search"></i></button>
                         </div>
 
                         <ul class="search__list">
-                            <li class="search__item">
+                            <li class="search__item hide-on-tablet-mobile">
                                 <a href="" class="search__link">
                                     <i class="search__heart fas fa-heart"></i>
                                 </a>
@@ -95,7 +97,15 @@
                 </div>
             </div>
 
+            <div class="overlay ">
+                <span class="overlay__icon"><i class="fas fa-times"></i></span>
+            </div>
+
             <nav class="nav">
+                <div class="search__wrap hide-on-pc">
+                    <input type="text" class="search__input" placeholder="Tìm kiếm">
+                    <button class="search__button"><i class="search__icon fas fa-search"></i></button>
+                </div>
                 <ul class="nav__list">
                     <li class="nav__item"><a href="" class="nav__link">TRANG CHỦ</a></li>
                     <li class="nav__item"><a href="" class="nav__link">GIỚI THIỆU</a></li>
@@ -103,10 +113,26 @@
                     <li class="nav__item"><a href="" class="nav__link">ĐỒNG HỒ NỮ</a></li>
                     <li class="nav__item"><a href="" class="nav__link">BLOGS</a></li>
                     <li class="nav__item"><a href="" class="nav__link">LIÊN HỆ</a></li>
+                    <li class="nav__item hide-on-pc"><a href="" class="nav__link">ĐĂNG NHẬP</a></li>
+                </ul>
+
+                <ul class="social hide-on-pc">
+                    <li class="social__item">
+                        <a href="" class="social__link"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+
+                    <li class="social__item">
+                        <a href="" class="social__link"><i class="fab fa-instagram"></i></i></a>
+                    </li>
+
+                    <li class="social__item">
+                        <a href="" class="social__link"><i class="fab fa-twitter"></i></i></a>
+                    </li>
                 </ul>
             </nav>
         </header>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./main.js"></script>
 </body>
 

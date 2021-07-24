@@ -2,6 +2,7 @@ $header_height: 195px;
 $bar_height: 40px;
 $search__height: 98px;
 $nav__height: 195px - 40px - 98px;
+
 .header {
     background-color: $black_color;
     height: $header_height;
@@ -23,7 +24,7 @@ $nav__height: 195px - 40px - 98px;
     &__address {
         color: $white_color;
         font-size: 1.4rem;
-        margin: 0 15px 0 10px;
+        margin: 0 17px 0 10px;
     }
     &__icon {
         margin-right: 5px;
@@ -53,7 +54,7 @@ $nav__height: 195px - 40px - 98px;
         color: $white_color;
         font-size: 1.2rem;
         text-decoration: none;
-        transition: all 0.8s ease-in-out;
+       
         :hover {
             color: $brown_color;
         }
@@ -119,6 +120,8 @@ $nav__height: 195px - 40px - 98px;
         align-items: center;
         justify-content: center;
         list-style: none;
+        margin: 0;
+        padding-left: 55px;
     }
     &__item {
         margin-left: 25px;
@@ -208,9 +211,14 @@ $nav__height: 195px - 40px - 98px;
         display: flex;
         align-items: center;
         justify-content: center;
+        padding-left: 0;
     }
     &__item {
         padding: 0 30px;
+        &:nth-child(1) .nav__link {
+            color: $brown_color;
+            border-bottom: 1px solid $brown_color;
+        }
     }
     &__link {
         font-size: 1.28rem;
@@ -218,9 +226,37 @@ $nav__height: 195px - 40px - 98px;
         color: $white_color;
         text-decoration: none !important;
         padding: 4px 0;
+
         &:hover {
             color: $brown_color;
             border-bottom: 1px solid $brown_color;
         }
     }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    &.active {
+        display: block !important;
+    }
+    &__icon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+
+        & i {
+            font-size: 2.4rem;
+            color: #b6b6b6;
+        }
+    }
+}
+.hide-on-pc {
+    display: none;
 }

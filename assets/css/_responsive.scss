@@ -1,0 +1,121 @@
+@media (max-width: 1023px) {
+    .hide-on-tablet-mobile {
+        display: none;
+    }
+
+    .search__list {
+        padding:0;
+    }
+    .search__menu {
+        display: block;
+        height: 24px;
+        width: 24px;
+        cursor: pointer;
+        margin-right: 4px;
+        &-icon {
+            color: $white_color;
+            font-size: 2.2rem;
+        }
+    }
+
+    .search__wrapper {
+        padding: 0 15px;
+    }
+
+    .search__button {
+        width: 34px;
+    }
+
+    .search__item {
+        margin-left: 0;
+    }
+
+    .nav {
+        position: fixed;
+        height: 100%;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background-color: #f3f3f3;
+        width: 260px;
+        display: block;
+        transform: translateX(-100%);
+        transition: all 0.3s ease-in-out;
+        z-index: 1000;
+
+        .search__wrap {
+            width: 220px;
+            height: 33px;
+            margin: 50px 0 20px 20px;
+            display: flex;
+        }
+
+        &.active {
+            transform: translateX(0);
+        }
+        &__list {
+            display: block;
+        }
+
+        &__item {
+            padding: 15px 0 15px 20px;
+            border-top: 1px solid #dddd;
+
+            &:last-child {
+                border-bottom: 1px solid #dddd;
+            }
+
+            &:nth-child(1) .nav__link {
+                color: #666666d9;
+                border-bottom: 0;
+            }
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.05);
+            }
+            &:hover .nav__link {
+                color: #111111d9;
+                border: 0;
+            }
+        }
+        &__link {
+            color: #666666d9;
+        }
+    }
+    .social {
+        padding-left: 20px;
+        justify-content: flex-start;
+        display: flex;
+        &__item {
+            margin: 0 10px 0 0;
+        }
+        &__link {
+            color: #666666d9;
+            font-size: 1.28rem;
+            :hover {
+                color: #111111d9;
+            }
+        }
+    }
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+    .hide-on-tablet {
+        display: none;
+    }
+    .header {
+        height: 98px;
+    }
+}
+
+@media (max-width: 739px) {
+    .hide-on-mobile {
+        display: none;
+    }
+    .header {
+        height: 68px;
+    }
+
+    .search__wrapper {
+        height: auto;
+    }
+}
