@@ -1,0 +1,122 @@
+.slide {
+    background: #222222;
+    position: relative;
+    &:hover .swiper-button {
+        display: flex;
+    }
+
+    .swiper-button {
+        position: absolute;
+        top: 50%;
+        height: 36px;
+        width: 36px;
+        border-radius: 50%;
+        border: 3px solid $white_color;
+        display: none;
+        text-align: center;
+        &:hover {
+            background: $brown_color;
+        }
+        &::after {
+            font-size: 2rem;
+            color: $white_color;
+        }
+    }
+    .swiper-button-next {
+        right: 30px;
+    }
+    .swiper-button-prev {
+        left: 30px;
+    }
+
+    &__information {
+        position: absolute;
+        width: 553px;
+        top: 50%;
+        left: 12%;
+        transform: translateY(-50%);
+        z-index: 100;
+        text-align: start;
+        opacity: 1;
+        &.active {
+            animation: appear 1s alternate;
+        }
+    }
+    &__subtitle {
+        color: $white_color;
+        font-size: 2.4rem;
+        margin: 14px 0;
+        text-align: left;
+        font-weight: 600;
+    }
+    &__title {
+        margin: 11px 0;
+        font-size: 5.6rem;
+        color: $white_color;
+        font-weight: 600;
+    }
+    &__dsc {
+        font-size: 1.6rem;
+        color: $white_color;
+        margin: 16px 0;
+        font-weight: 500;
+        line-height: 2.7rem;
+    }
+    &__button {
+        display: inline-block;
+        color: $white_color;
+        padding: 9px 40px;
+        border: 2.5px solid $white_color;
+        border-radius: 5px;
+        text-decoration: none !important;
+        margin: 9px 0;
+        font-weight: 600;
+        &:hover {
+            background-color: $brown_color;
+            color: $white_color;
+        }
+    }
+}
+.swiper-container {
+    width: 100%;
+    height: 600px;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 80%;
+}
+
+@keyframes appear {
+    0% {
+        left: 20%;
+    }
+
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

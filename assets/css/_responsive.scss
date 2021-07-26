@@ -4,7 +4,7 @@
     }
 
     .search__list {
-        padding:0;
+        padding: 0;
     }
     .search__menu {
         display: block;
@@ -29,6 +29,9 @@
     .search__item {
         margin-left: 0;
     }
+    .search__cart-list {
+        display: none !important;
+    }
 
     .nav {
         position: fixed;
@@ -42,7 +45,6 @@
         transform: translateX(-100%);
         transition: all 0.3s ease-in-out;
         z-index: 1000;
-
         .search__wrap {
             width: 220px;
             height: 33px;
@@ -105,6 +107,41 @@
     .header {
         height: 98px;
     }
+    .swiper-container {
+        height: 450px;
+    }
+
+    .slide {
+        .swiper-button-next {
+            right: 15px;
+        }
+        .swiper-button-prev {
+            left: 15px;
+        }
+        &__information {
+            width: 495px;
+            left: 40px;
+        }
+
+        &__subtitle {
+            font-size: 2.05rem;
+            margin: 12.5px 0;
+        }
+
+        &__title {
+            margin: 10px 0;
+            font-size: 4.9rem;
+        }
+
+        &__dsc {
+            font-size: 1.4rem;
+            margin: 14px 0;
+        }
+        &__button {
+            padding: 9px 29px;
+            margin: 9px 0;
+        }
+    }
 }
 
 @media (max-width: 739px) {
@@ -117,5 +154,38 @@
 
     .search__wrapper {
         height: auto;
+    }
+
+    .swiper-container {
+        height: 300px;
+    }
+
+    .slide {
+        &:hover .swiper-button {
+            display: none;
+        }
+        &__information {
+            width: 351px;
+            left: 20px;
+        }
+
+        &__subtitle {
+            font-size: 1.65rem;
+            margin: 10px 0;
+        }
+
+        &__title {
+            margin: 7.7px 0;
+            font-size: 3.85rem;
+        }
+
+        &__dsc {
+            font-size: 1.1rem;
+            margin: 11px 0;
+        }
+        &__button {
+            padding: 6px 13px;
+            margin: 9px 0;
+        }
     }
 }
