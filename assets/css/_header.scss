@@ -85,7 +85,6 @@ $nav__height: 195px - 40px - 98px;
         display: flex;
     }
     &__input {
-        flex: 1;
         padding: 0 10px;
         border-top-left-radius: 4px;
         border-bottom-left-radius: 4px;
@@ -223,7 +222,7 @@ $nav__height: 195px - 40px - 98px;
         align-items: center;
         justify-content: center;
         padding-left: 0;
-       margin-bottom: 8px;
+        margin-bottom: 8px;
     }
     &__item {
         padding: 0 30px;

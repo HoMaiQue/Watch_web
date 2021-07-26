@@ -140,9 +140,6 @@ body {
 }
 
 .search__input {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   padding: 0 10px;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
@@ -596,7 +593,7 @@ body {
     z-index: 1000;
   }
   .nav .search__wrap {
-    width: 220px;
+    width: 100px;
     height: 33px;
     margin: 50px 0 20px 20px;
     display: -webkit-box;
