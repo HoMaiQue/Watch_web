@@ -1,0 +1,80 @@
+.trend {
+    margin: 45px 0 75px 0;
+    display: block;
+    &__wrapper {
+        position: relative;
+        height: 300px;
+        width: 100%;
+        overflow: hidden;
+        margin: 15px 0;
+        opacity: 0;
+        &.active {
+            animation: appearTop 1s ease-in-out;
+            opacity: 1;
+        }
+        &:hover .trend__img {
+            transform: scale(1.1);
+        }
+    }
+    &__link {
+        display: block;
+        height: 100%;
+        width: 100%;
+        text-decoration: none;
+        position: relative;
+        &:before {
+            content: "";
+            display: block;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.15);
+            z-index: 100;
+        }
+    }
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: scale(1);
+        transition: all 0.5s ease-in-out;
+    }
+    &__box {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 30px;
+        z-index: 100;
+    }
+    &__subtitle {
+        font-size: 2rem;
+        margin: 4px 0;
+        color: $white_color;
+    }
+    &__distance {
+        height: 1px;
+        width: 50px;
+        margin: 15px 0;
+        background-color: $brown_color;
+    }
+    &__title {
+        font-size: 4rem;
+        color: $white_color;
+        margin: 8px 0;
+        font-weight: 600;
+    }
+}
+
+@keyframes appearTop {
+    0% {
+        transform: translateY(-20%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
