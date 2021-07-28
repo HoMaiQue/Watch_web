@@ -104,7 +104,7 @@
     }
 
     .trend__img {
-        object-position: 70% 0; 
+        object-position: 70% 0;
     }
 }
 
@@ -115,17 +115,20 @@
     .header {
         height: 98px;
     }
-    .swiper-container {
-        height: 450px;
-    }
 
     .slide {
+        &__container {
+            height: 450px;
+        }
+
         .swiper-button-next {
             right: 15px;
         }
+
         .swiper-button-prev {
             left: 15px;
         }
+
         &__information {
             width: 495px;
             left: 40px;
@@ -152,7 +155,6 @@
     }
 
     .trend {
-       
         &__subtitle {
             font-size: 1.85rem;
             margin: 3.7px 0;
@@ -160,7 +162,6 @@
         &__distance {
             margin: 14px 0;
         }
-     
     }
 }
 
@@ -176,14 +177,15 @@
         height: auto;
     }
 
-    .swiper-container {
-        height: 300px;
-    }
-
     .slide {
+        &__container {
+            height: 300px;
+        }
+
         &:hover .swiper-button {
             display: none;
         }
+
         &__information {
             width: 351px;
             left: 20px;
@@ -210,7 +212,6 @@
     }
 
     .trend {
-       
         &__subtitle {
             font-size: 3.6rem;
             margin: 6.6px 0;
@@ -218,6 +219,5 @@
         &__distance {
             margin: 24.75px 0;
         }
-     
     }
 }

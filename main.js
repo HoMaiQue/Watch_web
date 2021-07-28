@@ -36,7 +36,7 @@ $(document).ready(function () {
     })
 });
 
-var swiper = new Swiper(".mySwiper", {
+var swiper1 = new Swiper(".mySwiper", {
     loop: true,
     grabCursor: true,
     animation: {
@@ -53,6 +53,52 @@ var swiper = new Swiper(".mySwiper", {
 
 
 });
+
+var swiper2 = new Swiper(".product-swiper", {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    slidesPerGroup: 4,
+    grabCursor: true,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    }
+  });
+
+  console.log(swiper2);
+$(window).resize(function () {
+    let count = 0;
+    let widthWindow = $(window).width();
+    if(widthWindow > 1023) {
+        count = 4;
+    }else if( widthWindow > 739 && widthWindow < 1024 ) {
+        count = 3;
+    }else {
+        count = 2;
+    }
+    
+    var swiper2 = new Swiper(".product-swiper", {
+        slidesPerView: count,
+        spaceBetween: 30,
+        slidesPerGroup: 4,
+        grabCursor: true,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        }
+      });
+    
+    
+});
+
+
+
+
+
 
 
 
