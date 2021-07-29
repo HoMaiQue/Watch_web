@@ -668,6 +668,16 @@ body {
   }
 }
 
+.product {
+  opacity: 0;
+}
+
+.product.active {
+  -webkit-animation: fadeIn 2s backwards;
+          animation: fadeIn 2s backwards;
+  opacity: 1;
+}
+
 .product__title {
   font-size: 2.56rem;
   margin-bottom: 20px;
@@ -768,7 +778,7 @@ body {
   color: #c89979;
 }
 
-.product .product__swiper-button:after {
+.product .product__swiper-button::after {
   font-size: 3rem;
   font-weight: 700;
 }
@@ -794,6 +804,8 @@ body {
 }
 
 .product__like-wrap:hover .product__add-like {
+  -webkit-animation: appearLeft 0.1s ease;
+          animation: appearLeft 0.1s ease;
   display: block;
 }
 
@@ -846,6 +858,58 @@ body {
   display: none;
   cursor: pointer;
   outline: none;
+}
+
+@-webkit-keyframes appearLeft {
+  0% {
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes appearLeft {
+  0% {
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    -webkit-transform: translateX(200px);
+            transform: translateX(200px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    -webkit-transform: translateX(200px);
+            transform: translateX(200px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 @media (max-width: 1023px) {
@@ -1000,6 +1064,12 @@ body {
   .trend__distance {
     margin: 14px 0;
   }
+  .product__link {
+    height: 300px;
+  }
+  .product .product__swiper-button::after {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 739px) {
@@ -1045,9 +1115,16 @@ body {
   .trend__distance {
     margin: 24.75px 0;
   }
+  .product__link {
+    height: 200px;
+  }
+  .product .product__swiper-button::after {
+    font-size: 1.4rem;
+  }
 }
 
 .app {
   height: 5000px;
+  overflow: hidden;
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,4 +1,9 @@
 .product {
+    opacity: 0;
+    &.active {
+        animation: fadeIn 2s backwards;
+        opacity: 1;
+    }
     &__title {
         font-size: 2.56rem;
         margin-bottom: 20px;
@@ -72,7 +77,7 @@
             color: $brown_color;
         }
 
-        &:after {
+        &::after {
             font-size: 3rem;
             font-weight: 700;
         }
@@ -87,6 +92,7 @@
         justify-content: center;
         display: none;
         &:hover .product__add-like {
+            animation: appearLeft 0.1s ease;
             display: block;
         }
     }
@@ -139,5 +145,29 @@
         display: none;
         cursor: pointer;
         outline: none;
+    }
+}
+
+@keyframes appearLeft {
+    0% {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
     }
 }

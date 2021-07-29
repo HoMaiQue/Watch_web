@@ -163,6 +163,17 @@
             margin: 14px 0;
         }
     }
+
+    .product__link {
+        height: 300px;
+    }
+    .product {
+        .product__swiper-button {
+            &::after {
+                font-size: 2rem;
+            }
+        }
+    }
 }
 
 @media (max-width: 739px) {
@@ -218,6 +229,18 @@
         }
         &__distance {
             margin: 24.75px 0;
+        }
+    }
+
+    .product__link {
+        height: 200px;
+    }
+
+    .product {
+        .product__swiper-button {
+            &::after {
+                font-size: 1.4rem;
+            }
         }
     }
 }

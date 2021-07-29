@@ -13,7 +13,6 @@ $(document).ready(function () {
     $(window).scroll(() => {
         let location = $('html').scrollTop();
         let width = $(window).width();
-        console.log(location);
         if (location > 200 && width > 768) {
             $('.nav').addClass('stickNav');
         } else {
@@ -32,6 +31,11 @@ $(document).ready(function () {
         let location = $('html').scrollTop();
         if (location > 220) {
             $('.trend__wrapper').addClass('active');
+        }
+        console.log(location);
+        if(location > 600) {
+            $('.product').addClass('active');
+           
         }
     })
 });
@@ -54,45 +58,36 @@ var swiper1 = new Swiper(".mySwiper", {
 
 });
 
-var swiper2 = new Swiper(".product-swiper", {
-    slidesPerView: 4,
-    spaceBetween: 30,
-    slidesPerGroup: 4,
-    grabCursor: true,
-    loop: true,
-    loopFillGroupWithBlank: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev"
-    }
-  });
+$(document).ready(function () {
 
-  console.log(swiper2);
-$(window).resize(function () {
-    let count = 0;
-    let widthWindow = $(window).width();
-    if(widthWindow > 1023) {
-        count = 4;
-    }else if( widthWindow > 739 && widthWindow < 1024 ) {
-        count = 3;
-    }else {
-        count = 2;
-    }
-    
-    var swiper2 = new Swiper(".product-swiper", {
-        slidesPerView: count,
-        spaceBetween: 30,
-        slidesPerGroup: 4,
-        grabCursor: true,
-        loop: true,
-        loopFillGroupWithBlank: true,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev"
+    function slideProduct() {
+        let widthWindow = $(window).width();
+        let count = 0;
+        if (widthWindow > 1023) {
+            count = 4;
+        } else if (widthWindow > 739 && widthWindow < 1024) {
+            count = 3;
+        } else {
+            count = 2;
         }
-      });
-    
-    
+        var swiper2 = new Swiper(".product-swiper", {
+            slidesPerView: count,
+            spaceBetween: 30,
+            slidesPerGroup: count,
+            grabCursor: true,
+            loop: true,
+            loopFillGroupWithBlank: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            }
+        });
+    }
+    slideProduct();
+   
+    $(window).resize(function () {
+        slideProduct();
+    });
 });
 
 
