@@ -1,5 +1,6 @@
 .product {
     opacity: 0;
+    margin-bottom: 114px;
     &.active {
         animation: fadeIn 2s backwards;
         opacity: 1;

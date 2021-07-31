@@ -33,9 +33,14 @@ $(document).ready(function () {
             $('.trend__wrapper').addClass('active');
         }
         console.log(location);
-        if(location > 600) {
+        if (location > 600) {
             $('.product').addClass('active');
-           
+
+        }
+
+        if (location > 1000) {
+            $('.classico').addClass('active');
+            $('.modern').addClass('active');
         }
     })
 });
@@ -84,7 +89,7 @@ $(document).ready(function () {
         });
     }
     slideProduct();
-   
+
     $(window).resize(function () {
         slideProduct();
     });
