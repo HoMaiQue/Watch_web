@@ -1,0 +1,39 @@
+.product-common {
+    margin-top: 92px;
+    opacity: 0;
+    &.active {
+        animation: fadeIn 2s backwards;
+        opacity: 1;
+    }
+    &__title-wrap{
+        margin-bottom: 30px;
+    }
+    .product-common__title-link{
+        font-size: 2.56rem;
+        text-decoration: none;
+        color: #1c1c1c;
+        display: inline-block;
+        padding-right: 24px;
+        font-weight: bold;
+        
+        &:first-child {
+            color: $brown_color;
+        }
+    }
+  
+    &__wrap {
+        height: 388px;
+        margin-bottom: 30px;
+
+    }
+
+    &__link {
+        display: block;
+        height: 255px;
+    }
+
+    &__like-wrap {
+        top: 15px;
+        right: 30px;
+    }
+}

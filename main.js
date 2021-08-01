@@ -42,6 +42,10 @@ $(document).ready(function () {
             $('.classico').addClass('active');
             $('.modern').addClass('active');
         }
+
+        if (location > 1600) {
+            $('.product-common').addClass('active');
+        }
     })
 });
 
@@ -88,10 +92,21 @@ $(document).ready(function () {
             }
         });
     }
+
+    function productCommon() {
+        let widthWindow = $(window).width();
+        if (widthWindow > 1024) {
+            $('.col').addClass('col-2-4');
+        } else {
+            $('.col').removeClass('col-2-4');
+        }
+    }
+    productCommon();
     slideProduct();
 
     $(window).resize(function () {
         slideProduct();
+        productCommon();
     });
 });
 

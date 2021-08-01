@@ -16,3 +16,8 @@ body {
     max-width: 1230px;
     // padding: 0;
 }
+
+.col-2-4 {
+    flex: 0 0 20%;
+    max-width: 20%;
+}

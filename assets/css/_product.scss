@@ -28,6 +28,12 @@
         display: block;
         height: 325px;
     }
+    &__img {
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
 
     &__infor {
         border-top: 1px solid $box__color;
@@ -40,7 +46,7 @@
     &__name {
         font-size: 1.73rem;
         color: $black_color;
-        margin: 2px 0 10px;
+        margin: 2px 0 8px;
         font-weight: 700;
         text-decoration: none;
         &:hover {
@@ -62,7 +68,7 @@
         font-weight: 700;
         background-color: $brown_color;
         padding: 6px 16px;
-        margin-top: 12px;
+        margin-top: 10px;
         border: 1px solid #bf9275;
         &:hover {
             text-decoration: none;
@@ -99,11 +105,12 @@
     }
     &__like {
         height: 34px;
-        width: 24px;
+        width: 34px;
         border-radius: 100%;
         border: 1px solid #c0c0c0;
         cursor: pointer;
         position: relative;
+        padding: 0 ;
 
         &:hover {
             background-color: #b20000;
@@ -129,6 +136,7 @@
     }
 
     &__heart {
+        font-size: 1.7rem;
         color: #c0c0c0;
     }
 
@@ -136,7 +144,7 @@
         font-size: 1.4rem;
         background-color: $black_color;
         color: $white_color;
-        height: 56px;
+        height: 60px;
         width: 38px;
         padding: 3px 0;
         line-height: 2rem;

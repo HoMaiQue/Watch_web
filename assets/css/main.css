@@ -18,6 +18,13 @@ body {
   max-width: 1230px;
 }
 
+.col-2-4 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20%;
+          flex: 0 0 20%;
+  max-width: 20%;
+}
+
 .header {
   background-color: #333333;
   height: 195px;
@@ -713,6 +720,14 @@ body {
   height: 325px;
 }
 
+.product__img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .product__infor {
   border-top: 1px solid #e7e7e7;
   -webkit-box-flex: 1;
@@ -736,7 +751,7 @@ body {
 .product__name {
   font-size: 1.73rem;
   color: #333333;
-  margin: 2px 0 10px;
+  margin: 2px 0 8px;
   font-weight: 700;
   text-decoration: none;
 }
@@ -760,7 +775,7 @@ body {
   font-weight: 700;
   background-color: #c89979;
   padding: 6px 16px;
-  margin-top: 12px;
+  margin-top: 10px;
   border: 1px solid #bf9275;
 }
 
@@ -812,11 +827,12 @@ body {
 
 .product__like {
   height: 34px;
-  width: 24px;
+  width: 34px;
   border-radius: 100%;
   border: 1px solid #c0c0c0;
   cursor: pointer;
   position: relative;
+  padding: 0;
 }
 
 .product__like:hover {
@@ -842,6 +858,7 @@ body {
 }
 
 .product__heart {
+  font-size: 1.7rem;
   color: #c0c0c0;
 }
 
@@ -849,7 +866,7 @@ body {
   font-size: 1.4rem;
   background-color: #333333;
   color: #ffffff;
-  height: 56px;
+  height: 60px;
   width: 38px;
   padding: 3px 0;
   line-height: 2rem;
@@ -1048,6 +1065,49 @@ body {
   }
 }
 
+.product-common {
+  margin-top: 92px;
+  opacity: 0;
+}
+
+.product-common.active {
+  -webkit-animation: fadeIn 2s backwards;
+          animation: fadeIn 2s backwards;
+  opacity: 1;
+}
+
+.product-common__title-wrap {
+  margin-bottom: 30px;
+}
+
+.product-common .product-common__title-link {
+  font-size: 2.56rem;
+  text-decoration: none;
+  color: #1c1c1c;
+  display: inline-block;
+  padding-right: 24px;
+  font-weight: bold;
+}
+
+.product-common .product-common__title-link:first-child {
+  color: #c89979;
+}
+
+.product-common__wrap {
+  height: 388px;
+  margin-bottom: 30px;
+}
+
+.product-common__link {
+  display: block;
+  height: 255px;
+}
+
+.product-common__like-wrap {
+  top: 15px;
+  right: 30px;
+}
+
 @media (max-width: 1023px) {
   .hide-on-tablet-mobile {
     display: none;
@@ -1229,6 +1289,9 @@ body {
     font-size: 1.85rem;
     margin: 3.6px 0;
   }
+  .product-common__link {
+    height: 260px;
+  }
 }
 
 @media (max-width: 739px) {
@@ -1286,6 +1349,15 @@ body {
   .type-watch__subtitle {
     font-size: 3.3rem;
     margin: 6.6px 0;
+  }
+  .product-common__wrap {
+    height: 325px;
+  }
+  .product-common__link {
+    height: 200px;
+  }
+  .product-common__title-link {
+    margin-bottom: 20px;
   }
 }
 
