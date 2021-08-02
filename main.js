@@ -46,7 +46,22 @@ $(document).ready(function () {
         if (location > 1600) {
             $('.product-common').addClass('active');
         }
+
+        if (location > 2575) {
+            $('.blog-post').addClass('active');
+        }
     })
+
+    // footer
+    $('.footer__social-wrap').mouseenter(function () {
+        $(this).css('opacity', '0.9');
+        $(this).children('.footer__popup').css('display', 'block');
+    });
+
+    $('.footer__social-wrap').mouseleave(function () {
+        $(this).css('opacity', '1');
+        $(this).children('.footer__popup').css('display', 'none');
+    });
 });
 
 var swiper1 = new Swiper(".mySwiper", {
