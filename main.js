@@ -18,6 +18,19 @@ $(document).ready(function () {
         } else {
             $('.nav').removeClass('stickNav');
         }
+
+        function locationActive(topOffset, selector) {
+            if (location > topOffset) {
+                $(selector).addClass('active');
+            }
+        }
+
+        locationActive(220, '.trend__wrapper')
+        locationActive(600, '.product')
+        locationActive(1000, '.classico')
+        locationActive(1000, '.modern')
+        locationActive(1600, '.product-common')
+        locationActive(2575, '.blog-post')
     })
     // slide
     $('.swiper-button').click(() => {
@@ -25,31 +38,6 @@ $(document).ready(function () {
     })
     $('.swiper-button').mouseup(() => {
         $('.slide__information').removeClass('active');
-    })
-    // trend 
-    $(window).scroll(() => {
-        let location = $('html').scrollTop();
-        if (location > 220) {
-            $('.trend__wrapper').addClass('active');
-        }
-        console.log(location);
-        if (location > 600) {
-            $('.product').addClass('active');
-
-        }
-
-        if (location > 1000) {
-            $('.classico').addClass('active');
-            $('.modern').addClass('active');
-        }
-
-        if (location > 1600) {
-            $('.product-common').addClass('active');
-        }
-
-        if (location > 2575) {
-            $('.blog-post').addClass('active');
-        }
     })
 
     // footer
@@ -62,28 +50,8 @@ $(document).ready(function () {
         $(this).css('opacity', '1');
         $(this).children('.footer__popup').css('display', 'none');
     });
-});
 
-var swiper1 = new Swiper(".mySwiper", {
-    loop: true,
-    grabCursor: true,
-    animation: {
-
-    },
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-
-
-});
-
-$(document).ready(function () {
-
+    // product common
     function slideProduct() {
         let widthWindow = $(window).width();
         let count = 0;
@@ -124,6 +92,26 @@ $(document).ready(function () {
         productCommon();
     });
 });
+
+var swiper1 = new Swiper(".mySwiper", {
+    loop: true,
+    grabCursor: true,
+    animation: {
+
+    },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+
+
+});
+
+
 
 
 
