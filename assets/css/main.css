@@ -693,8 +693,8 @@ body {
   font-weight: 700;
 }
 
-.product-swiper:hover .product__swiper-button {
-  display: block;
+.product-swiper {
+  overflow: hidden;
 }
 
 .product__wrap {
@@ -783,20 +783,6 @@ body {
   text-decoration: none;
   background-color: #a07a61;
   color: #ffffff;
-}
-
-.product .product__swiper-button {
-  color: #333333;
-  display: none;
-}
-
-.product .product__swiper-button:hover {
-  color: #c89979;
-}
-
-.product .product__swiper-button::after {
-  font-size: 3rem;
-  font-weight: 700;
 }
 
 .product__like-wrap {
@@ -1606,9 +1592,6 @@ body {
   .product__link {
     height: 300px;
   }
-  .product .product__swiper-button::after {
-    font-size: 2rem;
-  }
   .type-watch__box {
     width: 293px;
   }
@@ -1675,9 +1658,6 @@ body {
   }
   .product__link {
     height: 200px;
-  }
-  .product .product__swiper-button::after {
-    font-size: 1.4rem;
   }
   .type-watch__box {
     width: 311px;

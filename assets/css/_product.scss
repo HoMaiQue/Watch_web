@@ -1,6 +1,7 @@
 .product {
     opacity: 0;
     margin-bottom: 114px;
+
     &.active {
         animation: fadeIn 2s backwards;
         opacity: 1;
@@ -11,9 +12,10 @@
         color: $black_color;
         font-weight: 700;
     }
-    &-swiper:hover .product__swiper-button {
-        display: block;
+    &-swiper {
+        overflow: hidden;
     }
+
     &__wrap {
         height: 468px;
         display: flex;
@@ -77,18 +79,6 @@
         }
     }
 
-    .product__swiper-button {
-        color: $black_color;
-        display: none;
-        &:hover {
-            color: $brown_color;
-        }
-
-        &::after {
-            font-size: 3rem;
-            font-weight: 700;
-        }
-    }
     &__like-wrap {
         position: absolute;
         top: 20px;
@@ -110,7 +100,7 @@
         border: 1px solid #c0c0c0;
         cursor: pointer;
         position: relative;
-        padding: 0 ;
+        padding: 0;
 
         &:hover {
             background-color: #b20000;

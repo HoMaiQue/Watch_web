@@ -69,10 +69,7 @@ $(document).ready(function () {
             grabCursor: true,
             loop: true,
             loopFillGroupWithBlank: true,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev"
-            }
+
         });
     }
 
@@ -84,32 +81,31 @@ $(document).ready(function () {
             $('.col').removeClass('col-2-4');
         }
     }
-    productCommon();
     slideProduct();
+    productCommon();
 
     $(window).resize(function () {
         slideProduct();
         productCommon();
     });
+
+    var swiper1 = new Swiper(".mySwiper", {
+        loop: true,
+        grabCursor: true,
+        animation: {
+        },
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
 });
 
-var swiper1 = new Swiper(".mySwiper", {
-    loop: true,
-    grabCursor: true,
-    animation: {
 
-    },
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-
-
-});
 
 
 
