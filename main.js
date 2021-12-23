@@ -52,41 +52,23 @@ $(document).ready(function () {
     });
 
     // product common
-    function slideProduct() {
-        let widthWindow = $(window).width();
-        let count = 0;
-        if (widthWindow > 1023) {
-            count = 4;
-        } else if (widthWindow > 739 && widthWindow < 1024) {
-            count = 3;
-        } else {
-            count = 2;
-        }
-        var swiper2 = new Swiper(".product-swiper", {
-            slidesPerView: count,
-            spaceBetween: 30,
-            slidesPerGroup: count,
-            grabCursor: true,
-            loop: true,
-            loopFillGroupWithBlank: true,
-
-        });
-    }
-
-    function productCommon() {
-        let widthWindow = $(window).width();
-        if (widthWindow > 1024) {
-            $('.col').addClass('col-2-4');
-        } else {
-            $('.col').removeClass('col-2-4');
-        }
-    }
-    slideProduct();
-    productCommon();
-
-    $(window).resize(function () {
-        slideProduct();
-        productCommon();
+    var swiper2 = new Swiper(".product-swiper", {
+        slidesPerView: 2,
+        spaceBetween: 30,
+        slidesPerGroup: 2,
+        grabCursor: true,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        breakpoints: {
+            740: {
+                slidesPerView: 3,
+                slidesPerGroup: 3,
+            },
+            1024: {
+                slidesPerView: 4,
+                slidesPerGroup: 4,
+            },
+        },
     });
 
     var swiper1 = new Swiper(".mySwiper", {
@@ -102,6 +84,22 @@ $(document).ready(function () {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
+    });
+
+
+    function productCommon() {
+        let widthWindow = $(window).width();
+        if (widthWindow > 1024) {
+            $('.col').addClass('col-2-4');
+        } else {
+            $('.col').removeClass('col-2-4');
+        }
+    }
+
+    productCommon();
+
+    $(window).resize(function () {
+        productCommon();
     });
 });
 
